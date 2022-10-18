@@ -1,0 +1,12 @@
+.menuItem {
+    padding: 20px;
+    display: flex;
+    border-bottom: 1px solid grey;
+    color: rgb(43, 43, 43);
+}
+
+.menuItem__description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
