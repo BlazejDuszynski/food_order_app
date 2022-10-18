@@ -5,11 +5,11 @@ const MenuItem = (props) => {
   return (
     <div className={styles.menuItem}>
       <div className={styles.menuItem__description}>
-        <h2>Pizza</h2>
+        <h2>{props.title}</h2>
         <p>Tomato sauce, mushrooms, cheece, salami</p>
-        <p>12.99 PLN</p>
+        <p>{`${props.price} PLN`}</p>
       </div>
-      <div className={styles.button}>+</div>
+      <button className={styles.button}>+</button>
     </div>
   );
 };

@@ -11,7 +11,11 @@ function App() {
       <Header />
       <Hero />
       <Menu>
-        <MenuItem />
+        <MenuItem title="Pizza" price="24,99" />
+        <MenuItem title="Spaghetti" price="17,99" />
+        <MenuItem title="Cheeseburger" price="21,99" />
+        <MenuItem title="Fish and Chips" price="25,99" />
+        <MenuItem title="Sushi" price="32,99" />
       </Menu>
     </div>
   );
