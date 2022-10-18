@@ -1,0 +1,7 @@
+.hero {
+  width: 100%;
+  height: 45vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url("/src/Images/food_table_2.webp");
+  background-size: cover;
+}
