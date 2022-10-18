@@ -1,5 +1,5 @@
 .header {
-  background-color: #8f1f1f;
+  background-color: #91280e;
   color: white;
   width: 100%;
   height: auto;
@@ -10,6 +10,36 @@
 
 .header__logo {
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-family: "Mukta", sans-serif;
+  align-self: center;
+}
+
+.header__cart {
+    color: white;
+    font-family: "Mukta", sans-serif;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 30px;
+    border-radius: 40px;
+    border: none;
+    background-color: #661c09;
+    cursor: pointer;
+}
+
+.header__cart:hover {
+    background-color: #551707;
+}
+
+.header__cart:hover .header__counter {
+    background-color: #7e230d;
+}
+
+.header__counter {
+    background-color: #91280e;
+    padding: 5px;
+    border-radius: 50%;
+    width: 50px;
 }
