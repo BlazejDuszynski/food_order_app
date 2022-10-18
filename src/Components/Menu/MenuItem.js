@@ -9,7 +9,7 @@ const MenuItem = (props) => {
         <p>Tomato sauce, mushrooms, cheece, salami</p>
         <p>12.99 PLN</p>
       </div>
-      <div></div>
+      <div className={styles.button}>+</div>
     </div>
   );
 };
