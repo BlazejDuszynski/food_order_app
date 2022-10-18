@@ -4,4 +4,18 @@
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
     url("/src/Images/food_table_2.webp");
   background-size: cover;
+  color: white;
+  font-family: 'Secular One', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 20%;
+}
+
+.hero__header {
+    font-size: 3em;
+}
+
+.hero__text {
+    font-size: 1.8em;
 }
