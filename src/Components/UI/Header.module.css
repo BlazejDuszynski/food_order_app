@@ -1,3 +1,9 @@
 .header {
-    
+  background-color: #8f1f1f;
+  color: white;
+  width: 100%;
+  height: auto;
+  padding: 10px 15%;
+  display: flex;
+  justify-content: space-between;
 }
