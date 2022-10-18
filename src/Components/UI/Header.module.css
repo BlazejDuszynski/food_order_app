@@ -7,3 +7,9 @@
   display: flex;
   justify-content: space-between;
 }
+
+.header__logo {
+  font-weight: 500;
+  font-size: 1.2em;
+  font-family: "Mukta", sans-serif;
+}

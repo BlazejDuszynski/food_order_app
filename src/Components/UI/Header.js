@@ -4,7 +4,7 @@ import styles from "./Header.module.css";
 const Header = () => {
   return (
     <header className={styles.header}>
-      <p>Logo - FoodApp</p>
+      <p className={styles.header__logo}>Logo - FoodApp</p>
       <button></button>
     </header>
   );
