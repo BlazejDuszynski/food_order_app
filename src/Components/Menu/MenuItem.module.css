@@ -1,22 +1,27 @@
 .menuItem {
-    padding: 20px;
-    display: flex;
-    border-bottom: 1px solid grey;
-    color: rgb(43, 43, 43);
-    justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid grey;
+  color: rgb(43, 43, 43);
+  position: relative;
 }
 
 .menuItem__description {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .button {
-    /* font-size: 2em;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border: none;
+    background-color: rgb(14, 174, 14);
+    color: white;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
-    padding: 5px;
-    background-color: grey;
-    align-items: center;
-    width: 50px; */
+    font-size: 2em;
 }
