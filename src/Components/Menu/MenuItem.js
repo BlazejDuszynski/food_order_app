@@ -6,7 +6,7 @@ const MenuItem = (props) => {
     <div className={styles.menuItem}>
       <div className={styles.menuItem__description}>
         <h2>{props.title}</h2>
-        <p>Tomato sauce, mushrooms, cheece, salami</p>
+        <p>{props.description}</p>
         <p>{`${props.price} PLN`}</p>
       </div>
       <button className={styles.button}>+</button>
