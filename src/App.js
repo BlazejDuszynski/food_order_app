@@ -11,9 +11,9 @@ function App() {
       <Header />
       <Hero />
       <Menu>
-        <MenuItem title="Pizza" price="24,99" description="Tomato sauce, mushrooms, cheece, salami" />
+        <MenuItem title="Pizza" price="24,99" description="Tomato sauce, mushrooms, cheese, salami" />
         <MenuItem title="Spaghetti" price="17,99" description="Pasta, meat, bologne sauce" />
-        <MenuItem title="Cheeseburger" price="21,99" description="Meat, cheese, tomato, onion, keychup" />
+        <MenuItem title="Cheeseburger" price="21,99" description="Meat, cheese, tomato, onion, ketchup" />
         <MenuItem title="Fish and Chips" price="25,99" description="FIsh, chips, salad" />
         <MenuItem title="Sushi" price="32,99" description="Futomaki, Hosomaki, Onigiri" />
       </Menu>
