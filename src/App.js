@@ -1,9 +1,9 @@
 import classes from "./App.css";
 
-import Header from "./Components/UI/Header";
-import Hero from "./Components/UI/Hero";
-import Menu from "./Components/Menu/Menu";
-import MenuItem from "./Components/Menu/MenuItem";
+import Header from "./Components/Layout/Header";
+import Hero from "./Components/Layout/Hero";
+import Menu from "./Components/Layout/Menu/Menu";
+import MenuItem from "./Components/Layout/Menu/MenuItem";
 
 function App() {
   return (
