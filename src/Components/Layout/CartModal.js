@@ -8,7 +8,10 @@ const CartModal = () => {
       <div className={classes.backdrop}></div>
       <Card className={classes.cartModal}>
         <div>
-          <header className={classes.header}>Your cart</header>
+          <header className={classes.header}>
+            <p className={classes.header__text}>your cart</p>
+            <button className={classes.header__button}>X</button>
+          </header>
           <ol>
             <li>
               <div>Sushi</div>
