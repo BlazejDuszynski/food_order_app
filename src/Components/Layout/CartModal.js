@@ -2,15 +2,20 @@ import React from "react";
 import Card from "../UI/Card";
 import classes from "./CartModal.module.css";
 
-const CartModal = () => {
+const CartModal = (props) => {
   return (
     <React.Fragment>
-      <div className={classes.backdrop}></div>
+      <div className={classes.backdrop} onClick={props.onCloseCartModal}></div>
       <Card className={classes.cartModal}>
         <div>
           <header className={classes.header}>
             <p className={classes.header__text}>Your cart</p>
-            <button className={classes.header__button}>X</button>
+            <button
+              className={classes.header__button}
+              onClick={props.onCloseCartModal}
+            >
+              X
+            </button>
           </header>
           <ol>
             <li className={classes.cartItem}>
@@ -38,6 +43,7 @@ const CartModal = () => {
               className={
                 classes.cartButtons__item + " " + classes.cartButtons__cancel
               }
+              onClick={props.onCloseCartModal}
             >
               Cancel
             </button>
