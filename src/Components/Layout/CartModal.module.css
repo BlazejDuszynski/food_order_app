@@ -70,6 +70,7 @@
   cursor: pointer;
   color: whitesmoke;
   font-family: inherit;
+  font-weight: 600;
 }
 
 .cartButtons__confirm {
