@@ -1,14 +1,15 @@
 import React from "react";
 import styles from "./MenuItem.module.css";
+import MenuItemDescription from "./MenuItemDescription";
 
 const MenuItem = (props) => {
   return (
     <div className={styles.menuItem}>
-      <div className={styles.menuItem__description}>
-        <h2>{props.title}</h2>
-        <p>{props.description}</p>
-        <p>{`${props.price} PLN`}</p>
-      </div>
+      <MenuItemDescription
+        title={props.title}
+        price={props.price}
+        description={props.description}
+      />
       <button className={styles.button}>+</button>
     </div>
   );

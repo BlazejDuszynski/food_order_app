@@ -5,12 +5,6 @@
   position: relative;
 }
 
-.menuItem__description {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .button {
     position: absolute;
     right: 20px;
