@@ -44,3 +44,38 @@
   font-size: 1.2em;
   cursor: pointer;
 }
+
+.cartItem {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartSummary {
+  border-top: 1px solid black;
+}
+
+.cartButtons {
+  padding: 20px 40px;
+  display: flex;
+  gap: 20px;
+  flex-direction: row-reverse;
+}
+
+.cartButtons__item {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: whitesmoke;
+  font-family: inherit;
+}
+
+.cartButtons__confirm {
+  background-color: rgb(34, 176, 34);
+}
+
+.cartButtons__cancel {
+  background-color: rgb(255, 53, 53);
+}
