@@ -10,7 +10,21 @@ const MenuItem = (props) => {
         price={props.price}
         description={props.description}
       />
-      <button className={styles.button}>+</button>
+      <form className={styles.form}>
+        <div>
+          <label>Amount</label>
+          <input
+            type="number"
+            step="1"
+            defaultValue="0"
+            min="0"
+            className={styles.input}
+          ></input>
+        </div>
+        <button type="submit" className={styles.button}>
+          Add
+        </button>
+      </form>
     </div>
   );
 };

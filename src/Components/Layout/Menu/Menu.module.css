@@ -7,4 +7,5 @@
   box-shadow: -2px 0px 70px -5px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: -2px 0px 70px -5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -2px 0px 70px -5px rgba(0, 0, 0, 0.75);
+  list-style: none;
 }
