@@ -1,10 +1,10 @@
-import classes from "./App.css";
 import { useState } from "react";
 
 import CartModal from "./Components/Layout/CartModal";
 import Header from "./Components/Layout/Header";
 import Hero from "./Components/Layout/Hero";
 import Menu from "./Components/Layout/Menu/Menu";
+import CartProvider from "./Store/CartProvider";
 
 function App() {
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
@@ -18,14 +18,14 @@ function App() {
   };
 
   return (
-    <div className={classes.App}>
+    <CartProvider>
       <Header onOpenCartModal={openCartModalHandler} />
       <Hero />
       <Menu />
       {isCartModalOpen && (
         <CartModal onCloseCartModal={closeCartModalHandler} />
       )}
-    </div>
+    </CartProvider>
   );
 }
 
