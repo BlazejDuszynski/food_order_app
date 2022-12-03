@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import CartContext from "../../Store/cart-context";
 import Card from "../UI/Card";
 import classes from "./CartModal.module.css";
 
 const CartModal = (props) => {
+  const modalCtx = useContext(CartContext);
+
+  const cartCtx = modalCtx.cartItems.map((cartItem) => {
+    return (
+      <li className={classes.cartItem}>
+        <div>Sushi</div>
+        <div>25,00 PLN</div>
+      </li>
+    );
+  });
+
   return (
     <React.Fragment>
       <div className={classes.backdrop} onClick={props.onCloseCartModal}></div>
@@ -17,19 +29,10 @@ const CartModal = (props) => {
               X
             </button>
           </header>
-          <ol>
-            <li className={classes.cartItem}>
-              <div>Sushi</div>
-              <div>25,00 PLN</div>
-            </li>
-            <li className={classes.cartItem}>
-              <div>Pizza</div>
-              <div>25,00 PLN</div>
-            </li>
-          </ol>
+          <ul></ul>
           <div className={classes.cartItem + " " + classes.cartSummary}>
             <p>Total amount</p>
-            <p>50,00 PLN</p>
+            <p>0,00 PLN</p>
           </div>
           <div className={classes.cartButtons}>
             <button

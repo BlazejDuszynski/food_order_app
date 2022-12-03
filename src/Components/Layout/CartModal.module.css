@@ -8,6 +8,8 @@
   width: 40%;
   padding: 0;
   overflow: hidden;
+  border-radius: 20px;
+  background-color: whitesmoke;
 }
 
 .backdrop {
