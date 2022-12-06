@@ -33,11 +33,13 @@ const CartProvider = (props) => {
   };
 
   const cartContext = {
-    cartItems: [],
-    totalAmount: 0,
+    cartItems: cartState.cartItems,
+    totalAmount: cartState.totalAmount,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
   };
+
+  console.log(cartContext.cartItems.length)
 
   return (
     <CartContext.Provider value={cartContext}>
