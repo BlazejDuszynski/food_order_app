@@ -1,8 +1,20 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
+import CartContext from "../../../Store/cart-context";
 import styles from "./MenuItem.module.css";
 import MenuItemDescription from "./MenuItemDescription";
 
 const MenuItem = (props) => {
+  const cartCtx = useContext(CartContext);
+
+  const addToCartHandler = (amount) => {
+    console.log(props.price);
+    cartCtx.addItem({
+      id: props.id,
+      title: props.title,
+      amount: amount,
+      price: props.price,
+    });
+  };
   const amountInputRef = useRef();
 
   const formSubmitHandler = (event) => {
@@ -10,7 +22,8 @@ const MenuItem = (props) => {
 
     const enteredAmount = amountInputRef.current.value;
     const enteredAmountNumber = +enteredAmount;
-    console.log(enteredAmountNumber);
+
+    addToCartHandler(enteredAmountNumber);
   };
 
   return (

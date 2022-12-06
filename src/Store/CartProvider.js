@@ -15,7 +15,7 @@ const cartReducer = (state, action) => {
       cartItems: updatedCartItems,
       totalAmount: updatedTotalAmount,
     };
-  } 
+  }
 };
 
 const CartProvider = (props) => {
