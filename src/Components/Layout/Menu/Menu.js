@@ -7,31 +7,31 @@ const availableMeals = [
   {
     id: "0",
     title: "Pizza",
-    price: "24,99",
+    price: 24.99,
     description: "Tomato sauce, mushrooms, cheese, salami",
   },
   {
     id: "1",
     title: "Spaghetti",
-    price: "17,99",
+    price: 17.99,
     description: "Pasta, meat, bologne sauce",
   },
   {
     id: "2",
     title: "Cheeseburger",
-    price: "21,99",
+    price: 21.99,
     description: "Meat, cheese, tomato, onion, ketchup",
   },
   {
     id: "3",
     title: "Fish and Chips",
-    price: "25,99",
+    price: 25.99,
     description: "Fish, chips, salad",
   },
   {
     id: "4",
     title: "Sushi",
-    price: "32,99",
+    price: 32.99,
     description: "Futomaki, Hosomaki, Onigiri",
   },
 ];

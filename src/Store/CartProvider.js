@@ -39,7 +39,7 @@ const CartProvider = (props) => {
     removeItem: removeItemFromCartHandler,
   };
 
-  console.log(cartContext.cartItems.length)
+  console.log(cartState.totalAmount)
 
   return (
     <CartContext.Provider value={cartContext}>
