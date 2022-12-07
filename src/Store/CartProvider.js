@@ -8,17 +8,29 @@ const defaultCartState = {
 
 const cartReducer = (state, action) => {
   if (action.type === "ADD") {
-    if (action.item.amount < 1 || action.item.amount > 5) {
-      return { cartItems: state.cartItems, totalAmount: state.totalAmount };
-    } else {
-      const updatedCartItems = state.cartItems.concat(action.item);
-      const updatedTotalAmount =
-        state.totalAmount + action.item.price * action.item.amount;
-      return {
-        cartItems: updatedCartItems,
-        totalAmount: +updatedTotalAmount.toFixed(2),
+    const updatedTotalAmount =
+      state.totalAmount + action.item.price * action.item.amount;
+
+    const existingCartItemIndex = state.cartItems.findIndex(
+      (cartItem) => cartItem.id === action.item.id
+    );
+    const existingCartItem = state.cartItems[existingCartItemIndex];
+    let updatedCartItems;
+
+    if (existingCartItem) {
+      const updatedCartItem = {
+        ...existingCartItem,
+        amount: existingCartItem.amount + action.item.amount,
       };
+      updatedCartItems = [...state.cartItems];
+      updatedCartItems[existingCartItemIndex] = updatedCartItem;
+    } else {
+      updatedCartItems = state.cartItems.concat(action.item);
     }
+    return {
+      cartItems: updatedCartItems,
+      totalAmount: +updatedTotalAmount.toFixed(2),
+    };
   }
 };
 
@@ -42,8 +54,6 @@ const CartProvider = (props) => {
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
   };
-
-  console.log(cartState.totalAmount);
 
   return (
     <CartContext.Provider value={cartContext}>

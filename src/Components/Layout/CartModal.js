@@ -4,13 +4,16 @@ import Card from "../UI/Card";
 import classes from "./CartModal.module.css";
 
 const CartModal = (props) => {
-  const modalCtx = useContext(CartContext);
+  const cartCtx = useContext(CartContext);
 
-  const cartCtx = modalCtx.cartItems.map((cartItem) => {
+  const itemsAddedToCart = cartCtx.cartItems.map((cartItem) => {
     return (
       <li className={classes.cartItem}>
-        <div>Sushi</div>
-        <div>25,00 PLN</div>
+        <p>{cartItem.title}</p>
+        <button>-</button>
+        <p>{cartItem.amount}</p>
+        <button>+</button>
+        <p>{cartItem.price} PLN</p>
       </li>
     );
   });
@@ -29,10 +32,10 @@ const CartModal = (props) => {
               X
             </button>
           </header>
-          <ul></ul>
+          <ul><header></header>{itemsAddedToCart}</ul>
           <div className={classes.cartItem + " " + classes.cartSummary}>
             <p>Total amount</p>
-            <p>0,00 PLN</p>
+            <p>{cartCtx.totalAmount} PLN</p>
           </div>
           <div className={classes.cartButtons}>
             <button
