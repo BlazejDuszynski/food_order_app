@@ -11,7 +11,11 @@ const Header = (props) => {
       <button className={styles.header__cart} onClick={props.onOpenCartModal}>
         <iconify-icon icon="ion:cart"></iconify-icon>
         <p>Your cart</p>
-        <p className={styles.header__counter}>{cartCtx.cartItems.length}</p>
+        <p className={styles.header__counter}>
+          {cartCtx.cartItems.reduce((currentAmount, cartItem) => {
+            return cartItem.amount + currentAmount;
+          }, 0)}
+        </p>
       </button>
     </header>
   );
