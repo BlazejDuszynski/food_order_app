@@ -10,10 +10,17 @@
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
 }
 
 .input {
-  width: auto;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(107, 107, 107);
+  text-align: center;
+  width: 70px;
+  font-size: .9em;
 }
 
 .button {
@@ -25,4 +32,17 @@
   border-radius: 10px;
   font-size: 1em;
   margin: 10px auto;
+  width: 100%;
+  background-color: #FF5A30;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #df4e29;
+}
+
+.upperPart {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }

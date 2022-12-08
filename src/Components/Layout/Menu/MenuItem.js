@@ -34,16 +34,18 @@ const MenuItem = (props) => {
         description={props.description}
       />
       <form className={styles.form} onSubmit={formSubmitHandler}>
-        <label>Amount</label>
-        <input
-          ref={amountInputRef}
-          type="number"
-          step="1"
-          defaultValue="0"
-          min="0"
-          max="5"
-          className={styles.input}
-        ></input>
+        <div className={styles.upperPart}>
+          <label>Amount</label>
+          <input
+            ref={amountInputRef}
+            type="number"
+            step="1"
+            defaultValue="0"
+            min="0"
+            max="5"
+            className={styles.input}
+          ></input>
+        </div>
         <button type="submit" className={styles.button}>
           Add
         </button>
