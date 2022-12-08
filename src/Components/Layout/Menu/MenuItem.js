@@ -23,6 +23,7 @@ const MenuItem = (props) => {
     const enteredAmountNumber = +enteredAmount;
 
     addToCartHandler(enteredAmountNumber);
+    amountInputRef.current.value = "0";
   };
 
   return (
