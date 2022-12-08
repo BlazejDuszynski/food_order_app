@@ -6,14 +6,32 @@ import classes from "./CartModal.module.css";
 const CartModal = (props) => {
   const cartCtx = useContext(CartContext);
 
+  const removeOneItemFromCart = (id) => {
+    console.log(cartCtx.cartItems);
+  };
+
+  const addOneItemToCart = () => {};
+
   const itemsAddedToCart = cartCtx.cartItems.map((cartItem) => {
     return (
       <li className={classes.cartItem}>
-        <p>{cartItem.title}</p>
-        <button>-</button>
-        <p>{cartItem.amount}</p>
-        <button>+</button>
-        <p>{cartItem.price} PLN</p>
+        <p className={classes.cartItem__title}>{cartItem.title}</p>
+        <div className={classes.amountManager}>
+          <button
+            className={classes.amountManager__button}
+            onClick={removeOneItemFromCart}
+          >
+            -
+          </button>
+          <p className={classes.amountManager__value}>{cartItem.amount}</p>
+          <button
+            className={classes.amountManager__button}
+            onClick={addOneItemToCart}
+          >
+            +
+          </button>
+        </div>
+        <p className={classes.cartItem__price}>{cartItem.price * cartItem.amount} PLN</p>
       </li>
     );
   });
@@ -32,7 +50,10 @@ const CartModal = (props) => {
               X
             </button>
           </header>
-          <ul><header></header>{itemsAddedToCart}</ul>
+          <ul>
+            <header></header>
+            {itemsAddedToCart}
+          </ul>
           <div className={classes.cartItem + " " + classes.cartSummary}>
             <p>Total amount</p>
             <p>{cartCtx.totalAmount} PLN</p>

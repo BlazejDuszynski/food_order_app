@@ -51,10 +51,13 @@
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .cartSummary {
   border-top: 1px solid black;
+  font-size: 1.1em;
+  font-weight: 700;
 }
 
 .cartButtons {
@@ -81,4 +84,38 @@
 
 .cartButtons__cancel {
   background-color: rgb(255, 53, 53);
+}
+
+.cartItem__title {
+  flex: 2;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.cartItem__price {
+  flex: 2;
+  text-align: end;
+}
+
+.amountManager {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100px;
+}
+
+.amountManager__button {
+  flex: 2;
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  background-color: inherit;
+  background-color: rgb(231, 230, 230);
+}
+
+.amountManager__value {
+  flex: 2;
+  text-align: center;
+  min-width: 30%;
 }
