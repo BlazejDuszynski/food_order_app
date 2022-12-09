@@ -1,38 +1,30 @@
 import React, { useContext } from "react";
 import CartContext from "../../Store/cart-context";
 import Card from "../UI/Card";
+import CartItem from "./CartItem";
 import classes from "./CartModal.module.css";
 
 const CartModal = (props) => {
   const cartCtx = useContext(CartContext);
 
-  const removeOneItemFromCart = (id) => {
-    console.log(cartCtx.cartItems);
-  };
+  // const removeOneItemFromCartHandler = (id) => {
+  //   console.log(cartCtx.cartItems);
+  // };
 
-  const addOneItemToCart = () => {};
+  // const addOneItemToCartHandler = (cartIitem) => {
+  //   console.log(cartIitem);
+  //   cartCtx.addItem({ ...cartIitem, amount: 1 });
+  //   console.log(cartCtx.cartItems);
+  // };
 
   const itemsAddedToCart = cartCtx.cartItems.map((cartItem) => {
     return (
-      <li className={classes.cartItem}>
-        <p className={classes.cartItem__title}>{cartItem.title}</p>
-        <div className={classes.amountManager}>
-          <button
-            className={classes.amountManager__button}
-            onClick={removeOneItemFromCart}
-          >
-            -
-          </button>
-          <p className={classes.amountManager__value}>{cartItem.amount}</p>
-          <button
-            className={classes.amountManager__button}
-            onClick={addOneItemToCart}
-          >
-            +
-          </button>
-        </div>
-        <p className={classes.cartItem__price}>{cartItem.price * cartItem.amount} PLN</p>
-      </li>
+      <CartItem
+        key={cartItem.id}
+        title={cartItem.title}
+        amount={cartItem.amount}
+        price={cartItem.price}
+      />
     );
   });
 
@@ -50,10 +42,7 @@ const CartModal = (props) => {
               X
             </button>
           </header>
-          <ul>
-            <header></header>
-            {itemsAddedToCart}
-          </ul>
+          <ul>{itemsAddedToCart}</ul>
           <div className={classes.cartItem + " " + classes.cartSummary}>
             <p>Total amount</p>
             <p>{cartCtx.totalAmount} PLN</p>

@@ -20,7 +20,7 @@
   border: 1px solid rgb(107, 107, 107);
   text-align: center;
   width: 70px;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 .button {
@@ -33,7 +33,7 @@
   font-size: 1em;
   margin: 10px auto;
   width: 100%;
-  background-color: #FF5A30;
+  background-color: #ff5a30;
   cursor: pointer;
 }
 
