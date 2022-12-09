@@ -23,7 +23,7 @@ const MenuItem = (props) => {
     const enteredAmountNumber = +enteredAmount;
 
     addToCartHandler(enteredAmountNumber);
-    amountInputRef.current.value = "0";
+    amountInputRef.current.value = "1";
   };
 
   return (
@@ -40,8 +40,8 @@ const MenuItem = (props) => {
             ref={amountInputRef}
             type="number"
             step="1"
-            defaultValue="0"
-            min="0"
+            defaultValue="1"
+            min="1"
             max="5"
             className={styles.input}
           ></input>
