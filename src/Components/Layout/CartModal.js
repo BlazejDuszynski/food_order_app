@@ -53,7 +53,7 @@ const CartModal = (props) => {
               X
             </button>
           </header>
-          {cartCtx.cartItems.length > 0 ? {itemsAddedToCart} : <p className={classes.message}>Your cart is empty.</p>}
+          {cartCtx.cartItems.length > 0 ? itemsAddedToCart : <p className={classes.message}>Your cart is empty.</p>}
           <div className={classes.cartItem + " " + classes.cartSummary}>
             <p>Total amount</p>
             <p>{cartCtx.totalAmount} PLN</p>
