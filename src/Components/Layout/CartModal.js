@@ -26,14 +26,16 @@ const CartModal = (props) => {
 
   const itemsAddedToCart = cartCtx.cartItems.map((cartItem) => {
     return (
-      <CartItem
-        key={cartItem.id}
-        title={cartItem.title}
-        amount={cartItem.amount}
-        price={cartItem.price}
-        onAddItem={addOneItemToCartHandler.bind(null, cartItem)}
-        onRemoveItem={removeOneItemFromCartHandler.bind(null, cartItem.id)}
-      />
+      <ul>
+        <CartItem
+          key={cartItem.id}
+          title={cartItem.title}
+          amount={cartItem.amount}
+          price={cartItem.price}
+          onAddItem={addOneItemToCartHandler.bind(null, cartItem)}
+          onRemoveItem={removeOneItemFromCartHandler.bind(null, cartItem.id)}
+        />
+      </ul>
     );
   });
 
@@ -51,7 +53,7 @@ const CartModal = (props) => {
               X
             </button>
           </header>
-          <ul>{itemsAddedToCart}</ul>
+          {cartCtx.cartItems.length > 0 ? {itemsAddedToCart} : <p className={classes.message}>Your cart is empty.</p>}
           <div className={classes.cartItem + " " + classes.cartSummary}>
             <p>Total amount</p>
             <p>{cartCtx.totalAmount} PLN</p>
