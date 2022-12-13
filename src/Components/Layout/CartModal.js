@@ -8,15 +8,16 @@ const CartModal = (props) => {
   const cartCtx = useContext(CartContext);
 
   const removeOneItemFromCartHandler = (id) => {
-    const removedItemIndex = cartCtx.cartItems.findIndex(
-      (cartItem) => cartItem.id === id
-    );
-    if (cartCtx.cartItems[removedItemIndex].amount <= 1) {
-      cartCtx.cartItems.splice(removedItemIndex, 1);
-    } else {
-      cartCtx.cartItems[removedItemIndex].amount = cartCtx.cartItems[removedItemIndex].amount - 1;
-    }
-    console.log(cartCtx.cartItems);
+    // const removedItemIndex = cartCtx.cartItems.findIndex(
+    //   (cartItem) => cartItem.id === id
+    // );
+    // if (cartCtx.cartItems[removedItemIndex].amount <= 1) {
+    //   cartCtx.cartItems.splice(removedItemIndex, 1);
+    // } else {
+    //   cartCtx.cartItems[removedItemIndex].amount = cartCtx.cartItems[removedItemIndex].amount - 1;
+    // }
+    // console.log(cartCtx.cartItems);
+    cartCtx.removeItem(id);
   };
 
   const addOneItemToCartHandler = (cartIitem) => {
