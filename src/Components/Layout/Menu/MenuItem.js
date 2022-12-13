@@ -29,6 +29,8 @@ const MenuItem = (props) => {
   return (
     <div className={styles.menuItem}>
       <MenuItemDescription
+        key={props.id}
+        id={props.id}
         title={props.title}
         price={props.price}
         description={props.description}
