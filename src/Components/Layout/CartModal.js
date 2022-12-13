@@ -11,11 +11,9 @@ const CartModal = (props) => {
   //   console.log(cartCtx.cartItems);
   // };
 
-  // const addOneItemToCartHandler = (cartIitem) => {
-  //   console.log(cartIitem);
-  //   cartCtx.addItem({ ...cartIitem, amount: 1 });
-  //   console.log(cartCtx.cartItems);
-  // };
+  const addOneItemToCartHandler = (cartIitem) => {
+    cartCtx.addItem({ ...cartIitem, amount: 1 });
+  };
 
   const itemsAddedToCart = cartCtx.cartItems.map((cartItem) => {
     return (
@@ -24,6 +22,7 @@ const CartModal = (props) => {
         title={cartItem.title}
         amount={cartItem.amount}
         price={cartItem.price}
+        onAddItem={addOneItemToCartHandler.bind(null, cartItem)}
       />
     );
   });
