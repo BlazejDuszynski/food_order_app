@@ -1,21 +1,43 @@
-import React, { useContext } from "react";
-import styles from "./Header.module.css";
+import React, { useContext, useEffect, useState } from "react";
+import classes from "./Header.module.css";
 import CartContext from "../../Store/cart-context";
 
 const Header = (props) => {
   const cartCtx = useContext(CartContext);
+  const { cartItems } = cartCtx;
+
+  const cartItemsAmount = cartItems.reduce((currentAmount, cartItem) => {
+    return cartItem.amount + currentAmount;
+  }, 0);
+
+  const [isBtnJumped, setIsBtnJumped] = useState(false);
+
+  const btnClasses = `${classes.header__cart} ${
+    isBtnJumped ? classes.bump : ""
+  }`;
+
+  useEffect(() => {
+    if (cartItems.length === 0) {
+      return;
+    }
+    setIsBtnJumped(true);
+
+    const timer = setTimeout(() => {
+      setIsBtnJumped(false);
+    }, 300);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [cartItems]);
 
   return (
-    <header className={styles.header}>
-      <p className={styles.header__logo}>Logo - FoodApp</p>
-      <button className={styles.header__cart} onClick={props.onOpenCartModal}>
+    <header className={classes.header}>
+      <p className={classes.header__logo}>Logo - FoodApp</p>
+      <button className={btnClasses} onClick={props.onOpenCartModal}>
         <iconify-icon icon="ion:cart"></iconify-icon>
         <p>Your cart</p>
-        <p className={styles.header__counter}>
-          {cartCtx.cartItems.reduce((currentAmount, cartItem) => {
-            return cartItem.amount + currentAmount;
-          }, 0)}
-        </p>
+        <p className={classes.header__counter}>{cartItemsAmount}</p>
       </button>
     </header>
   );
