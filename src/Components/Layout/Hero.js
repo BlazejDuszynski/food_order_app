@@ -12,9 +12,6 @@ const Hero = () => {
       <p className={styles.hero__text}>
         Choose your favourite dish and let us deliver it to your door!
       </p>
-      {/* <button id={"1"} chuj={"chuj"} onClick={clickHandler}>
-        Example
-      </button> */}
     </div>
   );
 };
