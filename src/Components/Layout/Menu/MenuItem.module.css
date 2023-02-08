@@ -52,3 +52,15 @@
     font-size: 0.8em;
   }
 }
+
+@media (max-width: 480px) {
+  .button {
+    padding: 5px;
+    width: 40%;
+    margin: 10px 0;
+    align-self: flex-end;
+  }
+  .form {
+    justify-content: flex-end;
+  }
+}
