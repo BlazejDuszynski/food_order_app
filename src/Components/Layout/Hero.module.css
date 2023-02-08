@@ -5,7 +5,7 @@
     url("/src/Images/food_table_2.webp");
   background-size: cover;
   color: white;
-  font-family: 'Secular One', sans-serif;
+  font-family: "Secular One", sans-serif;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -14,9 +14,45 @@
 }
 
 .hero__header {
-    font-size: 3em;
+  font-size: 3em;
 }
 
 .hero__text {
+  font-size: 1.8em;
+}
+
+@media (max-width: 1024px) {
+  .hero__header {
+    font-size: 2em;
+  }
+  .hero__text {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__header {
     font-size: 1.8em;
+  }
+  .hero {
+    padding: 10vh 20% 5vh 20%;
+  }
+}
+
+@media (max-width: 590px) {
+  .hero {
+    padding: 10vh 10% 3vh 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__header {
+    font-size: 1.5em;
+  }
+  .hero__text {
+    font-size: 1.2em;
+  }
+  .hero {
+    padding: 10vh 5% 3vh 5%;
+  }
 }
