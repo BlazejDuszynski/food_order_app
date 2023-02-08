@@ -18,6 +18,7 @@
   font-size: 1.5em;
   font-family: "Mukta", sans-serif;
   align-self: center;
+  cursor: pointer;
 }
 
 .header__cart {
@@ -90,6 +91,9 @@
 }
 
 @media (max-width: 480px) {
+  .header {
+    padding: 10px 15%;
+  }
   .header__yourCart {
     display: none;
   }
