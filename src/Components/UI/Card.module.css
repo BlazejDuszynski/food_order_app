@@ -4,3 +4,9 @@
   -webkit-box-shadow: -2px 0px 70px -5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -2px 0px 70px -5px rgba(0, 0, 0, 0.75);
 }
+
+@media (max-width: 768px) {
+  .card {
+    padding: 0;
+  }
+}

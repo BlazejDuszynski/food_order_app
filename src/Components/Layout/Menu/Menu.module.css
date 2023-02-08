@@ -9,3 +9,14 @@
   -moz-box-shadow: -2px 0px 70px -5px rgba(0, 0, 0, 0.75);
   list-style: none;
 }
+
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+  }
+}
