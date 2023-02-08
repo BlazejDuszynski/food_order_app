@@ -35,8 +35,8 @@ const Header = (props) => {
     <header className={classes.header}>
       <p className={classes.header__logo}>Logo - FoodApp</p>
       <button className={btnClasses} onClick={props.onOpenCartModal}>
-        <iconify-icon icon="ion:cart"></iconify-icon>
-        <p>Your cart</p>
+        <iconify-icon className={classes.header__icon} icon="ion:cart"></iconify-icon>
+        <p className={classes.header__yourCart} >Your cart</p>
         <p className={classes.header__counter}>{cartItemsAmount}</p>
       </button>
     </header>
