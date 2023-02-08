@@ -96,3 +96,22 @@
   padding: 30px;
   text-align: center;
 }
+
+@media (max-width: 1200px) {
+  .cartModal {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cartModal {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cartModal {
+    width: 95%;
+    font-size: 0.8em;
+  }
+}
