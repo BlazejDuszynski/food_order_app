@@ -1,6 +1,6 @@
 # Food order application - choose meals you want to order.
 
-Desktop application for ordering food created with HTML5, CSS3, JavaScript and React.js. Built within Udemy course "React - the complete guide".
+Application for ordering food created with HTML5, CSS3, JavaScript and React.js. Built within Udemy course "React - the complete guide".
 
 ## Table of contents
 * [General info](#general-info)
